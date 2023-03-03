@@ -1,0 +1,4 @@
+[submodule "src/oodts"]
+	path = src/lib/oodts
+	url = git@github.com:outoforbitdev/oodts.git
+	branch = main
