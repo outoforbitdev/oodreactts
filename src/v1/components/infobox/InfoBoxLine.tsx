@@ -15,7 +15,7 @@ interface IInfoBoxLineProps extends IComponentProps {
     even: boolean;
 }
 
-export function InfoBoxLine(props: IInfoBoxLineProps) {
+export default function InfoBoxLine(props: IInfoBoxLineProps) {
     let inputField;
     switch (props.lineType) {
         case InfoBoxLineType.String:

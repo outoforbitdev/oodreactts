@@ -7,7 +7,7 @@ interface IInfoBoxSectionProps extends IComponentProps {
     editMode: boolean;
 }
 
-export function InfoBoxSection(props: IInfoBoxSectionProps) {
+export default function InfoBoxSection(props: IInfoBoxSectionProps) {
     return (
         <Fragment>
             <tr>

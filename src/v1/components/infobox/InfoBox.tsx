@@ -21,7 +21,7 @@ interface IInfoBoxProps extends IComponentProps {
     toggleEdit: () => void;
 }
 
-export function InfoBox(props: IInfoBoxProps) {
+export default function InfoBox(props: IInfoBoxProps) {
     const componentName = "";
     const mobileClass = isMobile() ? "" : " desktop";
     const classNames = props.className + " " + componentName;
