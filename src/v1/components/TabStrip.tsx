@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import '../Styles/TabStrip.css';
 
 interface TabStripProps {
@@ -22,7 +21,7 @@ export class TabStrip extends Component<TabStripProps, TabStripState> {
             tabNames: this.props.tabNames,
             onTabSelect: this.props.onTabSelect,
             className: this.props.className ?? "",
-            uniqueKey: uuidv4(),
+            uniqueKey: "",
             selected: this.props.tabNames.values().next().value,
             tabs: new Map(),
         };

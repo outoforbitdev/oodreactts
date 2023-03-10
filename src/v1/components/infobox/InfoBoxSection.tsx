@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import '../Styles/InfoBox.css';
-import { IComponentProps } from './IComponentProps';
+import { IComponentProps } from '../IComponentProps';
 
 interface IInfoBoxSectionProps extends IComponentProps {
     header: string;

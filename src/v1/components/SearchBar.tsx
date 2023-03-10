@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import '../Styles/SearchBar.css';
 
 
@@ -20,7 +19,7 @@ export class SearchBar extends Component<ISearchBarProps, ISearchBarState> {
         this.state = {
             className: this.props.className,
             options: [],
-            uniqueKey: "OODCoreComponentsSearchBar" + uuidv4(),
+            uniqueKey: "OODCoreComponentsSearchBar",
             currentFocus: -1,
         };
     }
