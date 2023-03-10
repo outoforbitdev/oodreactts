@@ -6,7 +6,7 @@ import {
 } from 'react';
 import '../Styles/Input.css';
 import '../Styles/Themes.css';
-import { getClassName, IComponentProps } from './IComponentProps';
+import { getClassName, IComponentProps } from '../IComponentProps';
 
 type FieldValidator<T> = (val: T) => boolean;
 type FieldChange<T> = (val: T) => void;

@@ -4,7 +4,7 @@ import {
 } from 'react';
 // import { Compose } from '../Library/Compose';
 import '../Styles/Input.css';
-import { Button } from './Button';
+import { Button } from '../Button';
 import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
 
 interface ITextFieldProps extends IInputProps<string> {

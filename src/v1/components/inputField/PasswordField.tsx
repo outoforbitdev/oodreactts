@@ -3,7 +3,7 @@ import {
     useState
 } from 'react';
 import '../Styles/Input.css';
-import { Button } from './Button';
+import { Button } from '../Button';
 import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
 
 interface IPasswordFieldProps extends IInputProps<string> {
