@@ -21,7 +21,7 @@ export interface IInputProps<T> extends IComponentProps {
 
 export function InputSpan(props: IComponentProps): JSX.Element {
     return (
-        <span className={getClassName("OODCoreComponentInputField", props.className, props.theme)}>
+        <span className={getClassName("OODCoreComponentInputField", props.classNames)}>
             {props.children}
         </span>
     );

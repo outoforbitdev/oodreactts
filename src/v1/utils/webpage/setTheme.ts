@@ -1,12 +1,12 @@
 import setBodyClass from "./setBodyClass";
 
-enum Themes {
+export enum Themes {
     Light,
     Dark,
 }
 
-export default function setTheme(theme: Themes): void {
-    setBodyClass(themeToClass(theme));
+export function setTheme(theme: Themes): void {
+    document.documentElement.setAttribute("data-theme", themeToClass(theme));
 }
 
 function themeToClass(theme: Themes): string {

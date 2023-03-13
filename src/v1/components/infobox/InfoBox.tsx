@@ -1,7 +1,7 @@
 import React from 'react';
 import { isMobile } from '../../utils/webpage/isMobile';
 import '../Styles/InfoBox.css';
-import { Button } from '../Button';
+import { Button } from '../core/Button';
 import { IComponentProps } from '../IComponentProps';
 
 export interface IInfoBoxLine {
@@ -24,7 +24,7 @@ interface IInfoBoxProps extends IComponentProps {
 export default function InfoBox(props: IInfoBoxProps) {
     const componentName = "";
     const mobileClass = isMobile() ? "" : " desktop";
-    const classNames = props.className + " " + componentName;
+    const classNames = props.classNames + " " + componentName;
     return (
         <table className={classNames + mobileClass}>
             <thead><tr>
@@ -39,7 +39,7 @@ export default function InfoBox(props: IInfoBoxProps) {
             </tbody>
             <tfoot>
                 <tr><td colSpan={2}>
-                    <Button text={"Edit"} onClick={props.toggleEdit} />
+                    <Button onClick={props.toggleEdit}>Edit</Button>
                 </td></tr>
             </tfoot>
         </table>

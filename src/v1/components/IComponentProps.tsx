@@ -7,30 +7,26 @@ export enum StyleThemes {
 }
 
 export interface IComponentProps {
-    className?: string;
+    classNames?: string;
     children?: ReactNode;
-    theme?: StyleThemes;
 }
 
 export function getClassName(
-    standardClassName?: string,
-    additionalClassName?: string,
-    theme?: StyleThemes): string {
+    standardClassNames?: string,
+    additionalClassNames?: string): string {
 
-    return combineClassNames(
-        standardClassName,
-        combineClassNames(additionalClassName, theme ? theme : StyleThemes.Light));
+    return combineClassNames(standardClassNames, additionalClassNames);
 }
 
-function combineClassNames(firstName?: string, secondName?: string): string {
-    if (!IsNullOrEmpty(firstName)) {
-        if (!IsNullOrEmpty(secondName)) {
-            return firstName + " " + secondName;
+function combineClassNames(firstNames?: string, secondNames?: string): string {
+    if (!IsNullOrEmpty(firstNames)) {
+        if (!IsNullOrEmpty(secondNames)) {
+            return firstNames + " " + secondNames;
         }
-        return firstName!;
+        return firstNames!;
     }
-    else if (!IsNullOrEmpty(secondName)) {
-        return secondName!;
+    else if (!IsNullOrEmpty(secondNames)) {
+        return secondNames!;
     }
     return "";
 }

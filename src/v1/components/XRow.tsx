@@ -1,11 +1,11 @@
 import '../Styles/XRow.css';
-import { Button } from './Button';
+import { Button } from './core/Button';
 
 export function XRow() {
     return (
         <div className={"OODCoreXRow"}>
             <div className={"OODCoreXRowMargin"}></div>
-            <div className={"OODCoreXRowButton"}><Button text={"X"} /></div>
+            <div className={"OODCoreXRowButton"}><Button>{"X"}</Button></div>
         </div>
     );
 }

@@ -1,0 +1,4 @@
+div.OODCoreComponentsNavBar {
+    background-color: var(--background-color-inverted);
+    color: var(--text-color-inverted);
+}

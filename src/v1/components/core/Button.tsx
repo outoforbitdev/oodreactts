@@ -1,12 +1,9 @@
 import * as React from 'react';
-import { Component } from 'react';
-import { UniqueKey } from './Component';
-import { getClassName } from './IComponentProps';
-import { IComponentProps } from './IComponentProps';
-import '../Styles/Button.css';
+import { getClassName } from '../IComponentProps';
+import { IComponentProps } from '../IComponentProps';
+import '../../styles/Button.css';
 
 interface IButtonProps extends IComponentProps {
-    text?: string;
     onClick?: () => void;
     seamless?: boolean;
     width?: string;
@@ -17,8 +14,6 @@ interface IComponentStyle {
 }
 
 export function Button(props: IButtonProps) {
-    const uniqueKey = UniqueKey("OODCoreComponentButton");
-
     let className = "OODCoreComponentButton";
     className = props.seamless ? "OODCoreComponentButtonSeamless " + className : className;
     const style: IComponentStyle = {};
@@ -28,10 +23,10 @@ export function Button(props: IButtonProps) {
 
     return (
         <button onClick={props.onClick}
-            className={getClassName(className, props.className, props.theme)}
+            className={getClassName(className, props.classNames)}
             style={style}
         >
-            {props.text}
+            {props.children}
         </button>
     );
 }

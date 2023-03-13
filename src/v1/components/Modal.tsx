@@ -1,5 +1,5 @@
 import '../Styles/Modal.css';
-import { Button } from './Button';
+import { Button } from './core/Button';
 import { IComponentProps } from './IComponentProps';
 import { XRow } from './XRow';
 
@@ -24,8 +24,8 @@ export function Modal(props: IModalProps) {
                     <div className={"OODCoreModalButtons"}>
                         <div className={"OODCoreModalMargin"}></div>
                         <div className={"OODCoreModalButtonsDiv"}>
-                            {props.accept ? <Button text={props.accept} /> : null}
-                            {props.cancel ? <Button text={props.cancel} /> : null}
+                            {props.accept ? <Button>{props.accept}</Button> : null}
+                            {props.cancel ? <Button>{props.cancel}</Button> : null}
                         </div>
                     </div>
                 </div>
