@@ -3,7 +3,7 @@ import {
     useState
 } from 'react';
 import '../Styles/Input.css';
-import { Button } from './Button';
+import { Button } from '../core/Button';
 import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
 
 interface IPasswordFieldProps extends IInputProps<string> {
@@ -34,11 +34,13 @@ export function PasswordField(props: IPasswordFieldProps): JSX.Element {
             />
             {
                 props.showable ?
-                    <Button text={visible ? "Hide" : "Show"}
+                    <Button
                         seamless
                         onClick={toggleVisible(setVisible, visible)}
                         width={"40px"}
-                    /> : null
+                    >
+                        {visible ? "Hide" : "Show"}
+                    </Button> : null
             }
         </InputSpan>
     );

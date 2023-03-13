@@ -4,7 +4,7 @@ import {
 } from 'react';
 // import { Compose } from '../Library/Compose';
 import '../Styles/Input.css';
-import { Button } from './Button';
+import { Button } from '../core/Button';
 import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
 
 interface ITextFieldProps extends IInputProps<string> {
@@ -34,11 +34,13 @@ export function TextField(props: ITextFieldProps): JSX.Element {
             />
             {
                 props.clearable ?
-                    <Button text={"Clear"}
+                    <Button
                         // onClick={Compose(__clearField, setValue)}
                         seamless
                         width={"40px"}
-                    /> : null
+                    >
+                        {"Clear"}
+                    </Button> : null
             }
         </InputSpan>
     );

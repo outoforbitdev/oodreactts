@@ -6,7 +6,7 @@ import {
 } from 'react';
 import '../Styles/Input.css';
 import '../Styles/Themes.css';
-import { getClassName, IComponentProps } from './IComponentProps';
+import { getClassName, IComponentProps } from '../IComponentProps';
 
 type FieldValidator<T> = (val: T) => boolean;
 type FieldChange<T> = (val: T) => void;
@@ -21,7 +21,7 @@ export interface IInputProps<T> extends IComponentProps {
 
 export function InputSpan(props: IComponentProps): JSX.Element {
     return (
-        <span className={getClassName("OODCoreComponentInputField", props.className, props.theme)}>
+        <span className={getClassName("OODCoreComponentInputField", props.classNames)}>
             {props.children}
         </span>
     );

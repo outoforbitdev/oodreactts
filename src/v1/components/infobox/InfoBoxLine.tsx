@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/InfoBox.css';
 import { IComponentProps } from '../IComponentProps';
-import { TextField } from '../TextField';
+import { TextField } from '../inputField/TextField';
 
 enum InfoBoxLineType {
     String,
