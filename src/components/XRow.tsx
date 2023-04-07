@@ -1,3 +1,4 @@
+import React from 'react';
 import '../Styles/XRow.css';
 import { Button } from './core/Button';
 

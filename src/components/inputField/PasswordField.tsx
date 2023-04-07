@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
     useState
 } from 'react';
-import '../Styles/Input.css';
+import '../../styles/Input.css';
 import { Button } from '../core/Button';
 import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
 

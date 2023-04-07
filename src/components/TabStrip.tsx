@@ -32,13 +32,13 @@ export class TabStrip extends Component<TabStripProps, TabStripState> {
             <table
                 className={this.state.className + " OODCoreComponentsTabStrip"}>
                 <tbody><tr>{
-                    [...this.state.tabNames].map(
-                        (value, i) =>
-                            <td className={i === 0 ? "OODCoreComponentsTabStrip selected": "OODCoreComponentsTabStrip"}
-                                key={this.__getTabId(value)}
-                                ref={input => this.state.tabs.set(value, input)}
-                                onClick={(event) => this.__onTabSelect.bind(this)(value, event)}>{value}
-                            </td>)
+                    // [...this.state.tabNames].map(
+                    //     (value, i) =>
+                    //         <td className={i === 0 ? "OODCoreComponentsTabStrip selected": "OODCoreComponentsTabStrip"}
+                    //             key={this.__getTabId(value)}
+                    //             ref={input => this.state.tabs.set(value, input)}
+                    //             onClick={(event) => this.__onTabSelect.bind(this)(value, event)}>{value}
+                    //         </td>)
                 }
                     <td className={"OODCoreComponentsTabStrip spacer"} />
                 </tr></tbody>
