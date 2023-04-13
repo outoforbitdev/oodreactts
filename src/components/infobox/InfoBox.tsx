@@ -1,6 +1,6 @@
 import React from 'react';
-import { isMobile } from '../../utils/webpage/isMobile';
-import '../Styles/InfoBox.css';
+import { isMobile } from 'oodts';
+import '../../styles/InfoBox.css';
 import { Button } from '../core/Button';
 import { IComponentProps } from '../IComponentProps';
 

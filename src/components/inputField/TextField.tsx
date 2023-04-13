@@ -3,7 +3,7 @@ import {
     useState
 } from 'react';
 // import { Compose } from '../Library/Compose';
-import '../Styles/Input.css';
+import '../../styles/Input.css';
 import { Button } from '../core/Button';
 import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
 

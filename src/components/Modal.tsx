@@ -1,3 +1,4 @@
+import React from 'react';
 import '../Styles/Modal.css';
 import { Button } from './core/Button';
 import { IComponentProps } from './IComponentProps';

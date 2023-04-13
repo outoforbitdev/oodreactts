@@ -4,8 +4,8 @@ import {
     FocusEvent,
     KeyboardEvent
 } from 'react';
-import '../Styles/Input.css';
-import '../Styles/Themes.css';
+import '../../styles/Input.css';
+import '../../styles/Themes.css';
 import { getClassName, IComponentProps } from '../IComponentProps';
 
 type FieldValidator<T> = (val: T) => boolean;

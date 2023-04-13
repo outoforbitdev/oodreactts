@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/InfoBox.css';
+import '../../styles/InfoBox.css';
 import { IComponentProps } from '../IComponentProps';
 import { TextField } from '../inputField/TextField';
 
