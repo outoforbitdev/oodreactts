@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import IsNullOrEmpty from '../utils/string/IsNullOrEmpty'
+import { isNullOrEmpty } from 'oodts'
 
 export enum StyleThemes {
     Light = "OODCoreStyleThemeLight",
@@ -19,13 +19,13 @@ export function getClassName(
 }
 
 function combineClassNames(firstNames?: string, secondNames?: string): string {
-    if (!IsNullOrEmpty(firstNames)) {
-        if (!IsNullOrEmpty(secondNames)) {
+    if (!isNullOrEmpty(firstNames)) {
+        if (!isNullOrEmpty(secondNames)) {
             return firstNames + " " + secondNames;
         }
         return firstNames!;
     }
-    else if (!IsNullOrEmpty(secondNames)) {
+    else if (!isNullOrEmpty(secondNames)) {
         return secondNames!;
     }
     return "";
