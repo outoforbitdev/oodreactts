@@ -10,7 +10,7 @@ export function setTheme(theme: Themes): void {
 }
 
 function themeToClass(theme: Themes): string {
-    switch(theme) {
+    switch (theme) {
         case Themes.Light:
             return "OODCoreStyleThemeLight";
         case Themes.Dark:

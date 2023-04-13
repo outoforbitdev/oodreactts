@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { IComponentProps } from '../IComponentProps';
-import { Button } from './Button';
+import * as React from "react";
+import { IComponentProps } from "../IComponentProps";
+import { Button } from "./Button";
 
 interface IButtonLinkProps extends IComponentProps {
     seamless?: boolean;
@@ -10,10 +10,10 @@ interface IButtonLinkProps extends IComponentProps {
 
 export function ButtonLink(props: IButtonLinkProps) {
     return (
-        <Button 
+        <Button
             seamless={props.seamless}
             width={props.width}
-            onClick={() => window.location.href = props.link}
+            onClick={() => (window.location.href = props.link)}
             classNames={props.classNames}
         >
             {props.children}

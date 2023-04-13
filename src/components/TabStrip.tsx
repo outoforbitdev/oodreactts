@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import '../Styles/TabStrip.css';
+import React, { Component } from "react";
+import "../Styles/TabStrip.css";
 
 interface TabStripProps {
     tabNames: Set<string>;
@@ -10,7 +10,7 @@ interface TabStripProps {
 interface TabStripState extends TabStripProps {
     uniqueKey: string;
     selected: string;
-    tabs: Map<string, HTMLTableCellElement|null>;
+    tabs: Map<string, HTMLTableCellElement | null>;
 }
 
 export class TabStrip extends Component<TabStripProps, TabStripState> {
@@ -29,19 +29,21 @@ export class TabStrip extends Component<TabStripProps, TabStripState> {
 
     render() {
         return (
-            <table
-                className={this.state.className + " OODCoreComponentsTabStrip"}>
-                <tbody><tr>{
-                    // [...this.state.tabNames].map(
-                    //     (value, i) =>
-                    //         <td className={i === 0 ? "OODCoreComponentsTabStrip selected": "OODCoreComponentsTabStrip"}
-                    //             key={this.__getTabId(value)}
-                    //             ref={input => this.state.tabs.set(value, input)}
-                    //             onClick={(event) => this.__onTabSelect.bind(this)(value, event)}>{value}
-                    //         </td>)
-                }
-                    <td className={"OODCoreComponentsTabStrip spacer"} />
-                </tr></tbody>
+            <table className={this.state.className + " OODCoreComponentsTabStrip"}>
+                <tbody>
+                    <tr>
+                        {
+                            // [...this.state.tabNames].map(
+                            //     (value, i) =>
+                            //         <td className={i === 0 ? "OODCoreComponentsTabStrip selected": "OODCoreComponentsTabStrip"}
+                            //             key={this.__getTabId(value)}
+                            //             ref={input => this.state.tabs.set(value, input)}
+                            //             onClick={(event) => this.__onTabSelect.bind(this)(value, event)}>{value}
+                            //         </td>)
+                        }
+                        <td className={"OODCoreComponentsTabStrip spacer"} />
+                    </tr>
+                </tbody>
             </table>
         );
     }
@@ -52,7 +54,7 @@ export class TabStrip extends Component<TabStripProps, TabStripState> {
         }
         this.state.tabs.get(this.state.selected)?.classList.remove("selected");
         event.currentTarget.classList.add("selected");
-        
+
         this.setState({ selected: tabName });
         this.state.onTabSelect(tabName);
     }

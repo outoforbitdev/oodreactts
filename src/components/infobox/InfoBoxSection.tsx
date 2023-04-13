@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import '../../styles/InfoBox.css';
-import { IComponentProps } from '../IComponentProps';
+import React, { Fragment } from "react";
+import "../../styles/InfoBox.css";
+import { IComponentProps } from "../IComponentProps";
 
 interface IInfoBoxSectionProps extends IComponentProps {
     header: string;
@@ -11,13 +11,11 @@ export default function InfoBoxSection(props: IInfoBoxSectionProps) {
     return (
         <Fragment>
             <tr>
-                <th className="OODCoreComponentsInfoBox header"
-                    colSpan={2}>
+                <th className='OODCoreComponentsInfoBox header' colSpan={2}>
                     {props.header}
                 </th>
-            </tr>{
-                props.children
-            }
+            </tr>
+            {props.children}
         </Fragment>
     );
 }

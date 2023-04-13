@@ -1,7 +1,7 @@
-import React from 'react';
-import '../../styles/InfoBox.css';
-import { IComponentProps } from '../IComponentProps';
-import { TextField } from '../inputField/TextField';
+import React from "react";
+import "../../styles/InfoBox.css";
+import { IComponentProps } from "../IComponentProps";
+import { TextField } from "../inputField/TextField";
 
 enum InfoBoxLineType {
     String,
@@ -20,21 +20,13 @@ export default function InfoBoxLine(props: IInfoBoxLineProps) {
     switch (props.lineType) {
         case InfoBoxLineType.String:
         default:
-            <TextField
-                defaultValue={props.value}
-            />
+            <TextField defaultValue={props.value} />;
     }
 
     return (
-        <tr className={"OODCoreComponentsInfoBox" + props.even ? "even": "odd"}>
-            <td className="OODCoreComponentsInfoBox label">{props.label}</td>
-            <td className="OODCoreComponentsInfoBox value">
-                {
-                    props.editMode ?
-                        inputField :
-                        props.value
-                }
-                </td>
+        <tr className={"OODCoreComponentsInfoBox" + props.even ? "even" : "odd"}>
+            <td className='OODCoreComponentsInfoBox label'>{props.label}</td>
+            <td className='OODCoreComponentsInfoBox value'>{props.editMode ? inputField : props.value}</td>
         </tr>
     );
 }

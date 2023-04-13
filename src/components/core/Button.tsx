@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { getClassName } from '../IComponentProps';
-import { IComponentProps } from '../IComponentProps';
-import '../../styles/Button.css';
+import * as React from "react";
+import { getClassName } from "../IComponentProps";
+import { IComponentProps } from "../IComponentProps";
+import "../../styles/Button.css";
 
 interface IButtonProps extends IComponentProps {
     onClick?: () => void;
@@ -22,10 +22,7 @@ export function Button(props: IButtonProps) {
     }
 
     return (
-        <button onClick={props.onClick}
-            className={getClassName(className, props.classNames)}
-            style={style}
-        >
+        <button onClick={props.onClick} className={getClassName(className, props.classNames)} style={style}>
             {props.children}
         </button>
     );

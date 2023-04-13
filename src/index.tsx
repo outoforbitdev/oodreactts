@@ -5,11 +5,4 @@ import NavBar from "./components/navBar/NavBar";
 import NavBarText from "./components/navBar/NavBarText";
 import NavBarButton from "./components/navBar/NavBarButton";
 
-export {
-    Infobox,
-    InfoboxLine,
-    InfoboxSection,
-    NavBar,
-    NavBarText,
-    NavBarButton,
-}
+export { Infobox, InfoboxLine, InfoboxSection, NavBar, NavBarText, NavBarButton };

@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import { isNullOrEmpty } from 'oodts'
+import React, { ReactNode } from "react";
+import { isNullOrEmpty } from "oodts";
 
 export enum StyleThemes {
     Light = "OODCoreStyleThemeLight",
@@ -11,10 +11,7 @@ export interface IComponentProps {
     children?: ReactNode;
 }
 
-export function getClassName(
-    standardClassNames?: string,
-    additionalClassNames?: string): string {
-
+export function getClassName(standardClassNames?: string, additionalClassNames?: string): string {
     return combineClassNames(standardClassNames, additionalClassNames);
 }
 
@@ -24,8 +21,7 @@ function combineClassNames(firstNames?: string, secondNames?: string): string {
             return firstNames + " " + secondNames;
         }
         return firstNames!;
-    }
-    else if (!isNullOrEmpty(secondNames)) {
+    } else if (!isNullOrEmpty(secondNames)) {
         return secondNames!;
     }
     return "";

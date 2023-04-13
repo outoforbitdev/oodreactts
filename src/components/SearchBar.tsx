@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import '../Styles/SearchBar.css';
-
+import React, { Component } from "react";
+import "../Styles/SearchBar.css";
 
 interface ISearchBarProps {
     className?: string;
 }
 
-interface ISearchBarState extends ISearchBarProps{
+interface ISearchBarState extends ISearchBarProps {
     options: string[];
     uniqueKey: string;
     currentFocus: number;
@@ -27,26 +26,26 @@ export class SearchBar extends Component<ISearchBarProps, ISearchBarState> {
     render() {
         return (
             <div className={"OODCoreComponentsSearchBar autocomplete " + this.state.className}>
-                <input type="text"
+                <input
+                    type='text'
                     onFocus={this.__onFocus.bind(this)}
                     onBlur={this.__onBlur.bind(this)}
                     onKeyDown={this.__onKeyDown.bind(this)}
-                    className={"OODCoreComponentsSearchBar"} />
+                    className={"OODCoreComponentsSearchBar"}
+                />
                 <div className={"OODCoreComponentsSearchBar autocomplete-items"}>
-                    {
-                        this.state.options.map((option, i) => {
-                            let className = "OODCoreComponentsSearchBar";
-                            if (i === this.state.currentFocus) {
-                                className = className + " autocomplete-active";
-                            }
-                            return (
-                                <div
-                                    className={className}>
-                                    {option}
-                                    <input type="hidden" />
-                                </div>);
-                        })
-                    }
+                    {this.state.options.map((option, i) => {
+                        let className = "OODCoreComponentsSearchBar";
+                        if (i === this.state.currentFocus) {
+                            className = className + " autocomplete-active";
+                        }
+                        return (
+                            <div className={className}>
+                                {option}
+                                <input type='hidden' />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         );
@@ -72,14 +71,12 @@ export class SearchBar extends Component<ISearchBarProps, ISearchBarState> {
             if (currentFocus >= this.state.options.length) {
                 currentFocus = -1;
             }
-        }
-        else if (event.keyCode === 38) {
+        } else if (event.keyCode === 38) {
             currentFocus--;
             if (currentFocus < -1) {
                 currentFocus = this.state.options.length - 1;
             }
-        }
-        else if (event.keyCode === 27) {
+        } else if (event.keyCode === 27) {
             event.currentTarget.blur();
         }
 

@@ -1,8 +1,8 @@
-import React from 'react';
-import '../Styles/Modal.css';
-import { Button } from './core/Button';
-import { IComponentProps } from './IComponentProps';
-import { XRow } from './XRow';
+import React from "react";
+import "../Styles/Modal.css";
+import { Button } from "./core/Button";
+import { IComponentProps } from "./IComponentProps";
+import { XRow } from "./XRow";
 
 interface IModalProps extends IComponentProps {
     closable?: boolean;
@@ -11,7 +11,6 @@ interface IModalProps extends IComponentProps {
 }
 
 export function Modal(props: IModalProps) {
-
     return (
         <div className={"OODCoreModalContainer"}>
             <div className={"OODCoreModalColumn OODCoreModalMargin"}></div>
@@ -19,9 +18,7 @@ export function Modal(props: IModalProps) {
                 <div className={"OODCoreModalMargin"}></div>
                 <div className={"OODCoreModalFrame"}>
                     {props.closable ? <XRow /> : null}
-                    <div className={"OODCoreModalContent"}>
-                        {props.children ? props.children : null}
-                    </div>
+                    <div className={"OODCoreModalContent"}>{props.children ? props.children : null}</div>
                     <div className={"OODCoreModalButtons"}>
                         <div className={"OODCoreModalMargin"}></div>
                         <div className={"OODCoreModalButtonsDiv"}>
@@ -34,6 +31,5 @@ export function Modal(props: IModalProps) {
             </div>
             <div className={"OODCoreModalColumn OODCoreModalMargin"}></div>
         </div>
-
     );
 }

@@ -1,30 +1,26 @@
-import * as React from 'react';
-import {
-    useState
-} from 'react';
+import * as React from "react";
+import { useState } from "react";
 // import { Compose } from '../Library/Compose';
-import '../../styles/Input.css';
-import { Button } from '../core/Button';
-import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
+import "../../styles/Input.css";
+import { Button } from "../core/Button";
+import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from "./InputField";
 
 interface ITextFieldProps extends IInputProps<string> {
     clearable?: boolean;
 }
 
 export function TextField(props: ITextFieldProps): JSX.Element {
-    const onQuickValidate = props.onQuickValidate ?
-        props.onQuickValidate : defaultValidator;
-    const onFullValidate = props.onFullValidate ?
-        props.onFullValidate : defaultValidator;
-    const onChange = props.onValueChange ?
-        props.onValueChange : (_val: string) => { };
+    const onQuickValidate = props.onQuickValidate ? props.onQuickValidate : defaultValidator;
+    const onFullValidate = props.onFullValidate ? props.onFullValidate : defaultValidator;
+    const onChange = props.onValueChange ? props.onValueChange : (_val: string) => {};
     const defaultValue = props.defaultValue ? props.defaultValue : "";
 
     const [value, setValue] = useState(defaultValue);
 
     return (
         <InputSpan>
-            <input type={"text"}
+            <input
+                type={"text"}
                 inputMode={"text"}
                 value={value}
                 className={"OODCoreComponentTextField"}
@@ -32,16 +28,15 @@ export function TextField(props: ITextFieldProps): JSX.Element {
                 onChange={onValueChange(onQuickValidate, onChange, setValue)}
                 onKeyDown={onKeyDown(setValue, defaultValue)}
             />
-            {
-                props.clearable ?
-                    <Button
-                        // onClick={Compose(__clearField, setValue)}
-                        seamless
-                        width={"40px"}
-                    >
-                        {"Clear"}
-                    </Button> : null
-            }
+            {props.clearable ? (
+                <Button
+                    // onClick={Compose(__clearField, setValue)}
+                    seamless
+                    width={"40px"}
+                >
+                    {"Clear"}
+                </Button>
+            ) : null}
         </InputSpan>
     );
 }
