@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const NpmDtsPlugin = require('npm-dts-webpack-plugin');
 
 module.exports = {
   mode: "production",
@@ -28,13 +29,17 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     library: "oodts",
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
+    }),
+    new NpmDtsPlugin({
+      output: "./dist/index.d.ts",
+      entry: "./src/index.ts",
     })
   ]
 };
