@@ -4,7 +4,7 @@ const NpmDtsPlugin = require('npm-dts-webpack-plugin');
 
 module.exports = {
   mode: "production",
-  entry: './src/index.tsx',
+  entry: './src/index.ts',
   devtool: "inline-source-map",
   module: {
     rules: [
