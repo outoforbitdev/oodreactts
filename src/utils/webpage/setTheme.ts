@@ -1,6 +1,6 @@
 import setBodyClass from "./setBodyClass";
 
-export enum Themes {
+export const enum Themes {
     Light,
     Dark,
 }
