@@ -2,7 +2,7 @@ import setBodyClass from "./setBodyClass";
 
 export type Theme = "light" | "dark"
 
-export function setTheme(theme: Theme): void {
+export const  setTheme = (theme: Theme) => {
     document.documentElement.setAttribute("data-theme", themeToClass(theme));
 }
 
