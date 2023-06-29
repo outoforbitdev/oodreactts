@@ -1,19 +1,16 @@
 import setBodyClass from "./setBodyClass";
 
-export const enum Themes {
-    Light,
-    Dark,
-}
+export type Theme = "light" | "dark"
 
-export function setTheme(theme: Themes): void {
+export function setTheme(theme: Theme): void {
     document.documentElement.setAttribute("data-theme", themeToClass(theme));
 }
 
-function themeToClass(theme: Themes): string {
+function themeToClass(theme: Theme): string {
     switch (theme) {
-        case Themes.Light:
+        case "light":
             return "OODCoreStyleThemeLight";
-        case Themes.Dark:
+        case "dark":
             return "OODCoreStyleThemeDark";
         default:
             return "OODCoreStyleThemeLight";
