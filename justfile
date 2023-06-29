@@ -7,9 +7,9 @@ version:
 newversion version:
     npm version {{version}}
 
-publish:
+publish: build
     npm publish --dry-run
-    @echo "npm confirm-publish to publish"
+    @echo "just confirm-publish to publish"
 
-confirm-publish:
+confirm-publish: build
     npm publish
